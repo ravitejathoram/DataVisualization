@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Data Visualization Assignment 1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Oxygen" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body{
+    padding-top: 50px;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+p{
+  font-family: 'Oxygen', sans-serif;
+  align: "center";
+}
+
+div{
+  text-align: justify;
+}
+
+h1, h2, h3, h4{
+  font-family: 'Anton', sans-serif;
+}
+
+.tab{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+img{
+  padding: 10px;
+  width: 500px;
+  height: 600px;
+}
+
+.support{
+  padding: inherit;
+  width: 500px;
+  height: 500px;
+}
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+  </style>
+
+
+
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top" id = "my-navbar">
+    <div class = "container">
+      <div class = "navbar-header">
+        <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#myNavbar">
+          <span class = "icon-bar"></span>
+          <span class = "icon-bar"></span>
+          <span class = "icon-bar"></span>
+        </button>
+        <a href = "#introduction" class = "navbar-brand active" >Data Visualization</a>
+      </div>
+      <div class = "collapse navbar-collapse" id = "myNavbar">
+        <ul class = "nav navbar-nav navbar-right">
+          <li><a href = "#introduction">Introduction</a></li>
+          <li><a href = "#dvStory">Data Story</a></li>
+          <li><a href = "#summary">Summary</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class = "jumbotron">
+    <div class = "container text-center">
+      <h1>IOS Mobile App Data Analysis</h1>
+      <p>Data Story which helps to build a popular App</p>
+    </div>
+  </div>
+
+  <div class = "container">
+    <section>
+      <div class = "page-header" id = "introduction">
+        <h2>INTRODUCTION</h2>
+      </div>
+
+
+      <div class = "row">
+        <div class = "col-lg-12">
+            <h4> About Data Set:</h4>
+            <p>I used the Apple IOS Mobile app store data that has been extracted from Kaggle (Check out this <a target = "_blank" href = "https://www.kaggle.com/ramamet4/app-store-apple-data-set-10k-apps">link</a> for data). In the modern age, the ever-growing technology is making devices more compact and portable. The advancement in the modern mobile systems is one of the factors for that. We find more no. of mobiles in terms of models in the market and also with advanced features than when compared to computers. So as a developer it is worth concentrating on the development of applications that target mobile systems. In this analysis (with the help of visualization), I am concentrating on the IOS platform. My main moto in this analysis is to analyze the app data of Apple and extract knowledge which helps us to develop an application that gets reputation easily (probably building a trending App).</p>
+            <p>With millions of apps around nowadays, the following dataset has become very key to getting top trending apps in iOS app store. This dataset contains more than 7000 Apple iOS mobile application details. The data was extracted from the iTunes Search API on the Apple Inc website. R and Linux web scraping tools were used for this study. The following list illustrates the attributes present in the dataset (I am using):</p>
+            <div class = "tab">
+              <table align = "center">
+                <tbody>
+                <tr>
+                  <th>Attribute Name</th>
+                  <th>Attribute description</th>
+                </tr>
+                <tr><td>id               </td><td>Apple App ID</td></tr>
+                <tr><td>track_name       </td><td>Apple App Name</td></tr>
+                <tr><td>size_bytes       </td><td>Size of the App</td></tr>
+                <tr><td>price            </td><td>Price of the App</td></tr>
+                <tr><td>rating_count_tot </td><td>Total no. of users who rated all versions</td></tr>
+                <tr><td>rating_count_ver </td><td>Total no. of users who rated last version</td></tr>
+                <tr><td>user_rating      </td><td>Avg. user rating of all versions</td></tr>
+                <tr><td>user_rating_ver  </td><td>Avg. user rating of last version</td></tr>
+                <tr><td>prime_genre      </td><td>Genre into which the App falls</td></tr>
+                <tr><td>sup_devices.num  </td><td>No. of devices the App supports</td></tr>
+                <tr><td>lang.num         </td><td>No. of languages the App supports</td></tr>
+                <tr><td>ipadSc_urls.num  </td><td>Number of screenshots showed for display</td></tr>
+                <tr><td>vpp_lic          </td><td>Vpp Device Based Licensing Enabled</td></tr>
+              </tbody>
+            </table>
+            </div>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-12">
+            <h4>Pre-Processing Data:</h4>
+
+            <p> Firstly, I studied about every attribute thoroughly and decided to compute new attributes that help for analysis. So, started with the computation of two new attributes namely "popularity" and "popularity_last_ver". Popularity is computed with help of "rating_count_tot" and "user_rating" i.e. "popularity = rating_count_tot * user_rating". Similarly, "popularity_last_ver = rating_count_ver * user_rating_ver". The reason for computation of popularity is we cannot directly compare the rating of the application in the analysis since it is influenced by the no.of users rating that application. So it is better to compute an entity that consolidates the rating and no.of users who rated, then use that entity for analysis.</p>
+
+            <p>Secondly, the problem with data set lies in the scaling of attributes. For this purpose, I decided to perform Min-Max Normalization on attributes like "size_bytes", "popularity" and "popularity_last_ver". By doing this the scale of attributes confines to the range of 0-1. This further helps in the analysis.</p>
+
+            <p>Thirdly, as the data set contains more no.of attributes that are continuous in nature, I decided to convert those into categorical so that visualizations can be done easily. In this process, I added new attributes to the dataset like "paid" ('yes' if price field is non-zero and 'no' if price is zero), 'popularity_category'(categorized apps into 'Low', 'Medium', 'High' classes based on their popularity value) and similarly 'popularity_last_ver_category'.</p>
+
+            <p>The entire preprocessing is done in "Python", and the process can be viewed at this <a target = "_blank" href = "data_preprocessing.html">link</a> </p>
+        </div>
+      </div>
+
+    </section>
+  </div>
+<!-- End of Introduction -->
+<!--Start of DV Story-->
+  <div class = "container">
+    <section>
+      <div class = "page-header" id = "dvStory">
+        <h2>Data Story</h2>
+      </div>
+      <p>Throughout the story, the questions being posed tries to extract useful information that helps to choose a genre for the application and optimize the factors that influence the genre in order to develop an IOS application that will end up being popular.</p>
+      <h4>What genre to choose?</h4>
+      <div class = "row">
+        <div class = "col-lg-6">
+
+            <p>The visualization that can be built in order to answer this question clearly depends on the initial preferences(factors) of the developer. My main initial preference is "Price" (whether to build a paid app or unpaid app and also I am aware that most people decide the price of app based on the resources they use but still I feel it is an important decision to be made initially. I am ignoring the resources factor, for now, that is needed to build the application and decide price because of the scope of the dataset). So, I started observing data from the price perspective in order to choose the genre. Fig 1 clearly shows the distribution of genre overpaid factor. The Education genre is the genre where the no. of paid apps exceeds the no. of unpaid apps. Also, the overall count of applications in the Education genre is less. So, based on these two implications and according to my preferences, best choice of genre for me will be "Education".</p>
+
+            <p>I chose "Stacked Bars" with "Shapes" as marks. This visualization helped me to observe the difference between no.of paid apps and unpaid apps in each genre and at the same time, I could also compare every other genre. Choosing shapes as marks further helped to identify the gap between no.of paid and unpaid apps in each genre clearly. Clearly, distinct colors of shapes imply a variation of paid and unpaid easily.</p>
+
+            <p>Fig.2 shows a "Treemap" which acts as a support to my choice, by visualizing the domination of max price of an application in Education genre over other genres. But this domination raised another question in me regarding the range of the price we can impose on the application, I will get to this point in future implications.</p>
+            <p>Fig.3 shows an important implication present in the data i.e. irrespective of the genre the paid applications average size is less than those which are unpaid. So, we have to consider this point in future questions.</p>
+
+            <p>By the end of the first question, we ended up with a choice of genre, a doubt regarding the range of price and an observation about the size of applications.</p>
+        </div>
+
+        <div class = "col-lg-6">
+          <figure>
+            <img src="Distribution of genre over Price.png"/>
+            <figcaption>Fig.1 - Distribution of genre over Price.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-6">
+          <figure>
+            <img class = "support" src="Genre with highly paid App.png"/>
+            <figcaption>Fig.2 - Genre with highly paid App.</figcaption>
+          </figure>
+        </div>
+
+        <div class = "col-lg-6">
+
+          <figure>
+            <img class = "support" src="generalObservation1.png"/>
+            <figcaption>Fig.3 - General Observation of Size of Application over Genre and Paid.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <hr class = "style-two">
+      <!-- New Question -->
+        <h4>How size and price of app influence the popularity of Education Application?</h4>
+        <div class = "row">
+          <div class = "col-lg-6">
+            <figure>
+              <img src="role.png"/>
+              <figcaption>Fig.4 - Role of size and price of application in popularity of Education apps vs Other Apps.</figcaption>
+            </figure>
+          </div>
+          <div class = "col-lg-6">
+              <p>My next important preference is "Popularity”. Though I chose to build a paid app, it must be popular to get some downloads. So, I have to consider the factors that influence "Popularity" of application.</p>
+              <p>For ease of analysis, I created the entire genre into one set (excluding Education genre) and Education genre into another set. Basically, Set1 implies all entries of Education genre, "In Set1" implies elements present in Education genre and "Out Set1" implies elements that are not part of Education Genre. The Fig.3 shows a visualization that depicts some implications regarding the influence of size and price of application in the context of popularity. This visualization implies that for a highly popular education app the average price is less (when compared to medium/low popular educational apps) and also the average size of popular education applications is less(when compared to medium/low popular educational apps). On the other hand, among all other applications, highly popular apps have a less average price(when compared to medium/low popular other apps) and high average size of the application (when compared to medium/low popular other apps). So, this combination shows a clear distinction that needs to be addressed while building a paid education genre app in order to be popular.</p>
+
+              <p>I chose "side-by-side Circle Views" for this analysis with "Gantt bars" as a mark. This visualization helped to easily identify the differences and trend with respect to two dimensions (education and non-education genre) and two measurements (avg. price and avg. size of applications). Thereby comparison of various factors is easy. Gantt bar marks help in clearly observing the levels without any overlapping.</p>
+
+              <p>By the end of the second question, we understood the main abstract factors we need to address while building a paid educational app and also indirectly we came to know that though apps are paid the average price of apps is less that helps to decide the range of price on our application. (this conclusion also helps in resolving our prevailing doubt regarding price range on the app). Also, the avg. price of highly rated educational apps is USD 1.3 and avg. size of such applications is 0.04 units (this is normalized value though). Moreover, this answer established a relation between "Price and Size of apps" and "Popularity".</p>
+          </div>
+        </div>
+
+        <hr class = "style-two">
+        <h4>What is the level of compatibility developer need to address in Educational Application?</h4>
+        <div class = "row">
+          <div class = "col-lg-6">
+              <p>In my opinion and based on the scope of dataset compatibility should be addressed based on two important factors. They are 1) No. of Devices the application support 2) No. of Languages the application support. Through the visualization (in Fig.5) initially, I fixed my desired attributes like avg. size of app and avg. price of an app on axes and tried to pick a cluster with the desired avg. price and avg. size, the ideal point is shown in the visualization meets my constraints. The size of the ideal point cluster implies no.of devices it supports, that stands at 40. Then, I added avg. a number of languages as a detail to each cluster, that implies information about no. of languages my application should support. From the information of the ideal point, avg. no.of languages stand on 8(rounded value) but the average can be deceptive sometimes so I added a median, variance as an extra detail. So now we have all the information to address the compatibility issue while developing an education app.</p>
+              <p>I chose "scatter plots" for this visualization since this makes it easy to view data from two measures point of view (in my case avg. price and avg. size). I used a variety of marks in this like "size", "detail" with a combination of various attributes to impose constraints and extract knowledge from the clusters formed. Size shows no. of supporting devices and detail shows various information about number of languages.</p>
+          </div>
+
+          <div class = "col-lg-6">
+            <figure>
+              <img src="Compatibility.png"/>
+              <figcaption>Fig.5 - Compatibility.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+  </div>
+
+  <div class = "container">
+    <section>
+      <div class = "page-header" id = "summary">
+        <h2>Summary</h2>
+      </div>
+
+
+      <div class = "row">
+        <div class = "col-lg-12">
+
+            <p>Initially, I started with the intention to build a paid IOS app that should be trending. From the Data Story constructed above in the form of three questions I could extract enough information to achieve my intention. The following points depict my summary:</p>
+            <ul>
+              <li>To make a paid application in IOS, education genre is the best place to address. Since the no. of paid apps are more in this section that implies people are interested to buy apps which belongs to this genre. Also, the total no. of apps in this genre are less that implies the necessity of a good application in this genre.</li>
+              <li>Some general observations showed that while developing a paid application one needs to keep in mind about the average size of the application. Applications need to be more optimized (in term of size) if they are paid than when compared to the unpaid apps in any particular genre. So, this applies to the Education genre also.</li>
+              <li>So, for developing a highly popular paid Education app, our initial concerns must be the "size of the app" and "price of the app".</li>
+              <li>Then I came to know the range of price I can impose on the application and preferred size of application with respect to popularity. This would help in making an abstract level plan/architecture before starting the application. Also, this detail will help me to decide on the resources while developing the app.</li>
+              <li>By now, I can make a relation between "price", "size" and "popularity" in applications of the Educational genre.</li>
+              <li>Then in order to address the compatibility issue, I just need to relate "Factors influencing compatibility" with "price and size of the app". The last question addressed this issue in a fine manner.</li>
+              <li>Finally, from question 1 and question 2 I was able to relate "Price and Size of App" with Popularity and from question 3 I was able to relate "Price and Size of App" with "No. of devices to support and No. of Languages to support", I can now start developing application with all this information and end up developing a decent "Trending Paid Educational App".</li>
+            <ul>
+        </div>
+      </div>
+
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class = "container text-center">
+      <hr>
+      <ul class = "list-inline">
+        <li><h4>Naga Ravi Teja Thoram</h4></li>
+        <li><h4>13VV1A0522</h4></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,11 @@
+﻿id,country,GDP_percapita,population_growth,GDP_growth,standard_deviation,current_state,prediction_rate,prediction_status
+372,Ireland,60513.6,0.3,26.3,2.842163827,developed,16,gradually developing
+203,Czechia,17561.7,0.1,4.5,0.115037421,developed,12,gradually developing
+499,Montenegro,6424.1,0.1,4.5,-0.592117398,under_developed,12,gradually developing
+104,Myanmar,16082.5,0.1,3.8,0.021119215,developed,9,gradually developing
+528,Netherlands,44332.1,0.3,2,1.814758847,developed,9,gradually developing
+192,Cuba,7656.6,0.2,4.4,-0.513862808,under_developed,7,gradually developing
+356,India,1614.2,1.2,7.6,-0.897510298,under_developed,6,gradually developing
+360,Indonesia,3346.5,1.2,4.8,-0.787522123,under_developed,4,gradually developing
+792,Turkey,9125.8,1.6,4,-0.420579528,under_developed,3,gradually developing
+682,Saudi Arabia,20710.6,2.8,3.4,0.314969166,developed,2,gradually developing

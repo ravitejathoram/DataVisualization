@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8"/>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 10%;
+  right:10%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 4px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+p{
+  font-family: 'Oxygen', sans-serif;
+  align: "center";
+}
+#Text {
+  font-size: 12px;
+  text-align: right;
+  margin: 0 auto;
+}
+.tab{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+div{
+  text-align: justify;
+}
+svg{
+  /* background-color: black; */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+path {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+path:hover{
+  stroke: #cfa63e;
+	stroke-width: 6;
+	opacity: 10;
+}
+.lineRoger:hover {
+  stroke: #cfa63e;
+	stroke-width: 6;
+	opacity: 10;
+}
+.pathLight {
+  stroke: #cfa63e;
+	stroke-width: 6;
+	opacity: 10;
+}
+
+.barLight {
+	fill: #2E2E31;
+}
+.axis path,
+.axis line{
+  fill:none;
+  stroke:#000;
+}
+#switch {
+  height:20px;
+  width:70px;
+  position: absolute;
+  top: 100px;
+  left: 15%;  /* Put the left edge on the horizontal center */
+  margin-right: 200; /* Move it 148px to the right of the horizontal center, placing it over the lightswitch */
+ }
+</style>
+<title>Data Visualization Assignment 2</title>
+</head>
+<body>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id = "my-navbar">
+      <div class = "container">
+        <div class = "navbar-header">
+          <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#myNavbar">
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+          </button>
+          <a href = "#introduction" class = "navbar-brand active" >Data Visualization</a>
+        </div>
+        <div class = "collapse navbar-collapse" id = "myNavbar">
+          <ul class = "nav navbar-nav navbar-right">
+            <li><a href = "#introduction">Introduction</a></li>
+            <li><a href = "#overview">Visualization</a></li>
+            <li><a href = "#detail">Write Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class = "jumbotron">
+      <div class = "container text-center">
+        <h1>10year AUS Open Macthes Data Analysis</h1>
+        <p>Insights about top players in the last decade</p>
+        <p>Naga Ravi Teja Thoram</p>
+        <p>Data Visualization</p>
+        <p>09/17/2018</p>
+      </div>
+    </div>
+    <div class = "container">
+      <section>
+        <div class = "page-header" id = "introduction">
+          <h2>Introduction</h2>
+        </div>
+        <p>Given 10 year AUS Open Matches data, I started with pre-processing the data. My initial thoughts are to extract insights about the top 30 players in the last decade. I pre-processed the data in a way suitable to my intention and designed two visualizations using D3.js to communicate my thoughts. One important assumption I have taken while deciding the top players is "The player must at least play 8 matches in the past decade in order to be considered".</p>
+        <div class = "row">
+          <div class= "col-lg-12">
+          </div>
+        </div>
+        <section>
+      </div>
+  <div class = "container">
+    <section>
+      <div class = "page-header" id = "overview">
+        <h2>Visualization</h2>
+      </div>
+      <div><h4>Select the range of top players in the decade:</h4></div>
+      <select id = "tool" onchange = "topChange(this);">
+        <option value="10" selected="selected">Top 1-10</option>
+        <option value="20">Top 10-20</option>
+        <option value="30">Top 20-30</option>
+      </select>
+      <div></div>
+      <div class = "row">
+        <div class= "col-lg-6">
+          <div id = "area1"></div>
+          <div id="Text">
+              <p id="InsideT">
+                Winning Percentage (Figure 1 Overview Visualization)
+              </p>
+        </div>
+        </div>
+        <div class= "col-lg-6">
+          <div id = "area2"></div>
+          <div id ="switch"><p>Avg. error</p></div>
+          <div id="Text">
+              <p id="InsideT">
+                Years in the range of 2000's from 2004 to 2014(Figure 2 detail visualization)
+              </p>
+          </div>
+          <div class = "tab">
+            <table align = "right">
+              <tbody>
+              <tr><td bgcolor=#04a086>Player1</td>
+              <td bgcolor=#a4a7ff>Player2</td>
+              <td bgcolor=#e04df9>Player3</td>
+              <td bgcolor=#f94c4c>Player4</td>
+              <td bgcolor=#9ff94b>Player5</td>
+              <td bgcolor=#206dfc>Player6</td>
+              <td bgcolor=#d3fc20>Player7</td>
+              <td bgcolor=#967558>Player8</td>
+              <td bgcolor=#99ffeb>Player9</td>
+              <td bgcolor=#a31111>Player10</td></tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+    <div class = "container">
+      <section>
+        <div class = "page-header" id = "detail">
+          <h2>Write Up</h2>
+        </div>
+      <div class = "row">
+        <div class= "col-lg-12">
+          <div id = "area1"></div>
+          <p>
+            The Figure1 gives an abstract level overview of the top players. This visualization shows the winning percentage of the top 30 players(shown in the batches of 10). The following points give a brief description about this abstract overview.
+            <ul>
+              <li> X - axis shows the percentage of the winning of player and Y - axis shows the name of the player</li>
+              <li>This visualization allows an interaction with the help of drop-down box. This interaction helps to filter the top players set we are interested in.</li>
+              <li>When we hover over the bars the exact percentage of winning will be displayed.</li>
+              <li>When we hover over the bars the respective line chart of the player in the detail view also gets highlighted.</li>
+              <li>Visualization used is a Horizontal Bar chart, since this is the easiest view to top compare the players</li>
+              <li>Bars as marks are an easy way to compare the entities. The positioning of the bars at same level enables users to compare the width(which depicts the winning percentage)of each bar with other bars easily. The color gradient from dark olive to light blue acts as a channel and helps to easily identify the dominating player.</li>
+              <li>A smooth transition is provided to bars(growth in width) while updating, making it user-friendly.</li>
+              <li>Sorting is done in bottom-up fashion, this type of sorting player position shows the domination of the top player over others.  </li>
+            <ul>
+          </p>
+        </div>
+      </div>
+      <div class = "row">
+        <div class= "col-lg-12">
+          <p>
+            The Figure2 shows the detail view of the top set of players selected in the overview section. The visualization shows a timeline of how the average errors of players varied along the decade. The following points give some more clear view about this section:
+              <ul>
+                <li>X - axis shows the years of decade and Y - axis shows the average error(total errors player committed divided by the no.of matches they appeared in the past decade) over the decade.</li>
+                <li>Visualization used is a Multi-timeline chart.</li>
+                <li>The line acts as the mark, the flow of the path of line easily shows the variation of average errors the player committed over the decade. The color acts as channel distinct color distinguishes the one line from other i.e distinguishing one player from other.</li>
+                <li>Detail view updates as per the interactions of the user with Overview.</li>
+                <li>This visualization helps us to predict the change of position of the player from top 20/top 30 to more better one. Since most of the players with average error ranging from 30-40 are occupying top positions. From this insight, if a particular player in top 20 set has a time lime chart that consistently travels in 30-40 range over the past few years, we can then predict that the player can move into top 10 (assuming the player is still playing).</li>
+                <li>The small transition is also enabled on the lines, where all lines start with the same color and pick a different color by end of tranisition.</li>
+                <li>Also, the user can hover on the line to have a clear and detail path of it.</li>
+                <li>Color scale (bottom of the detail visualization)shows the color picked for each player in each set. For example "Player 1" in the first set of top 10 is "Roger Federer" and color used for his line is shown by the Player 1 cell color in the color scale.</li>
+              </ul>
+          </p>
+        </div>
+      </div>
+      <section>
+    </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+  <script>
+    d31 = d3
+    window.d3 = null
+  </script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script>
+    d32 = d3
+    window.d3 = null
+  </script>
+
+  <script src="index.js"></script>
+  <footer>
+    <div class = "container text-center">
+      <hr>
+      <ul class = "list-inline">
+        <a href="extraCredit.html">Link to Extra Credit overview</a>
+        <li><h4>Naga Ravi Teja Thoram</h4></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

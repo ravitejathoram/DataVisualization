@@ -1,0 +1,11 @@
+﻿id,country,GDP_percapita,population_growth,GDP_growth,standard_deviation,current_state,prediction_rate,prediction_status
+8,Albania,3984.2,-0.1,2.6,-0.747032913,under_developed,20,Highly developing
+724,Spain,25865.4,-0.2,3.2,0.642260653,developed,16,Highly developing
+392,Japan,34628.7,-0.1,1.2,1.198665069,developed,12,Highly developing
+348,Hungary,12350.6,-0.3,3.1,-0.215828697,under_developed,10,Highly developing
+380,Italy,30462.4,-0.1,0.7,0.934135985,developed,7,Highly developing
+304,Greenland,36976.7,-0.1,0.3,1.347745617,developed,5,Highly developing
+233,Estonia,17112,-0.3,1.4,0.086484813,developed,4,Highly developing
+268,Georgia,3491.4,-1.4,2.8,-0.77832205,under_developed,2,Highly developing
+428,Latvia,13704.1,-1.2,2.7,-0.129891507,under_developed,2,Highly developing
+276,Germany,41686.2,0.2,1.7,1.646763863,developed,2,Highly developing

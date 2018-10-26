@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Oxygen" rel="stylesheet">
+  <title>Data Visualization Assignment 2</title>
+  <style>
+
+  p, ul, li{
+    font-family: 'Oxygen', sans-serif;
+    align: "center";
+  }
+  div.tooltip {
+      color: #222;
+      background: #fff;
+      border-radius: 3px;
+      box-shadow: 0px 0px 2px 0px #a6a6a6;
+      padding: .2em;
+      text-shadow: #f5f5f5 0 1px 0;
+      opacity: 0.9;
+      position: absolute;
+    }
+    path:hover{
+      stroke: red;
+      stroke-width: 2;
+      opacity: 10;
+    }
+    /* div{
+      text-align: justify;
+    } */
+    .activateLight{
+      stroke: red;
+      stroke-width: 2;
+      opacity: 10;
+    }
+    .activateRect{
+      stroke: red;
+      stroke-width: 2;
+      opacity: 10;
+    }
+    #pie2{
+      padding: 2em;
+    }
+    svg{
+      /* background-color: black; */
+      margin-left: auto;
+      margin-right: 2em;
+      display: block;
+      background: #bdbdbd;
+    }
+    p{
+      font-size: 0.85em;
+    }
+    .text-class{
+      font-style: italic;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 0.75em;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top" id = "my-navbar">
+    <div class = "container">
+      <div class = "navbar-header">
+        <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#myNavbar">
+          <span class = "icon-bar"></span>
+          <span class = "icon-bar"></span>
+          <span class = "icon-bar"></span>
+        </button>
+        <a href = "#introduction" class = "navbar-brand active">Data Visualization</a>
+      </div>
+      <div class = "collapse navbar-collapse" id = "myNavbar">
+        <ul class = "nav navbar-nav navbar-right">
+          <li><a href = "#introduction">Introduction</a></li>
+          <li><a href = "#overview">Visualization</a></li>
+          <li><a href = "#detail">Write Up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class = "jumbotron">
+    <div class = "container text-center">
+      <h1>World Country Profiles</h1>
+      <p>Naga Ravi Teja Thoram</p>
+      <p>Data Visualization</p>
+      <p>10/15/2018</p>
+    </div>
+  </div>
+  <div class = "container">
+    <section>
+      <div class = "page-header" id = "introduction">
+        <h2>Introduction</h2>
+      </div>
+      <b><p>The data is extracted from kaggle at this <a target="_blank" href="https://www.kaggle.com/sudalairajkumar/undata-country-profiles">link</a>. It is then pre-processed and following attributes were derived:</p></b>
+      <ul>
+        <li>Id:ISO code for each country</li>
+        <li>Country:Name of each country</li>
+        <li>GDP_percapita:Current Percapita of country</li>
+        <li>population_growth:Percentage showing the consistent change in population of each country</li>
+        <li>GDP_growth:Percentage showing the consistent change in GDP of each country</li>
+        <li>standard_deviation:This indicates the status of country based current GDP of the country compared with average world GDP</li>
+        <li>current_state:Category field based on the standard_deviation value says whether country is under_developed/developed</li>
+        <li>prediction_rate:The development change occuring in the country computed based on population_growth and GDP_growth</li>
+        <li>prediction_status:The prediction category based on the value of prediction_rate and direction the development of country is moving. The possible values for this are: highly_declining, highly_developing and gradually_developing.</li>
+      </ul>
+      <p>All the pre-processing steps can be found here at this <a target="_blank" href="pre-processing.html">link</a>.</p>
+      <div class = "row">
+        <div class= "col-lg-12">
+        </div>
+      </div>
+      <section>
+    </div>
+  <div class = "container">
+    <section>
+      <div class = "page-header" id = "overview">
+        <h2>Visualization</h2>
+      </div>
+      <div><h4>Select a category(to view top 10 in the selected category):</h4></div>
+      <select id = "tool" onchange = "topChange(this);">
+        <option value="10" selected="selected">Highly Declining</option>
+        <option value="20">Highly Developing</option>
+        <option value="30">Gradually Developing</option>
+      </select>
+      <div></div>
+      <div class = "row">
+        <div class= "col-lg-6">
+        <div id="map"></div>
+        <div><h6>Figure 1: Overview</h6></div>
+        </div>
+        <div class= "col-lg-6">
+          <div id="param"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Percapita GDP Detail View:</h4></div>
+          <div id="pie1"></div>
+          <div><h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2:Detail View</h6></div>
+        </div>
+      </div>
+    </section>
+    </div>
+    <div class = "container">
+      <section>
+        <div class = "page-header" id = "detail">
+          <h2>Write Up</h2>
+        </div>
+        <div class = "row">
+          <div class= "col-lg-12">
+                <p>
+                  <b><p>The Figure 1 shows an abstract level overview of the top 10 countries in each category. The following points give a brief description about this abstract overview.</p></b>
+                  <ul>
+                    <li>This Choropleth visualization allows an interaction with the help of drop-down box. This interaction helps to filter the category we are interested in.</li>
+                    <li>When we hover over the countries that are appearing in a color the granual information of the country(such as change rate, GDP, population growth, current position etc.) is shown.</li>
+                    <li>Also, when we hover over the area of the country, the boundary of the country gets highlighted to avoid ambiguity if countries closer are in similar color.(extra credit point)</li>
+                    <li>The strength of the color possessed by each country depicts the rate at which the country is changing(either it can be developing or decling depends on the category choosen)</li>
+                    <li>The color occupies the entire area occupied by the country.</li>
+                    <li>The maps support "zooming effect" so that even countries with less area can be zoomed and hovered to explore thier respective granular information.For instance consider the country named "Sierra Leone"(of highly declining category) its area is very small  to explore its granualr details we can double click on area near to it and zoom on to it, then hover over the area to explore details.(extra credit point). </li>
+                    <li>Marks here are geographic paths. Channel here is color. Since map is shown on single page the color channel allows us to compare the attribute it represents very easily.</li>
+                  <ul>
+                </p>
+          </div>
+        </div>
+        <div class = "row">
+          <div class= "col-lg-12">
+                <p>
+                  <b><p>The Figure 2 shows an detail level view of countries. The following points describes this view:</b></p>
+                  <ul>
+                    <li>This is pie chart view that shows the GDP percapita of countires in the selected category. The GDP percapita is one of the important social indicator to assess/predict about country's future. This is the reason I chose it as my primary attribute for detail view.</li>
+                    <li>The interaction of user with the drop-down present over the abstract view updates this detail view.</li>
+                    <li>When we hover over a country in the abstract view the respective sector in the Pie chart gets highlighted.</li>
+                    <li>Above two points makes these visualizations linked.</li>
+                    <li>Marks used here are sectors. Channels used are size of the sector and color. Color channel distinguishes the country from one another and size channel shows the strength of the attribute it is representing (here Percapita GDP). </li>
+                    <li>This linked visualizations helped me to identify that in Higly declining countries. The relation between percapita GDP and change rate is not uniform. But it Highly developing and gradually developing countries the countries with dominating change rate have also dominating percapita GDP.</li>
+                  <ul>
+                </p>
+          </div>
+        </div>
+      </section>
+      </div>
+      <footer>
+        <div class = "container text-center">
+          <hr>
+          <ul class = "list-inline">
+            <li><h4>Naga Ravi Teja Thoram</h4></li>
+          </ul>
+        </div>
+      </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
+    <!-- <script src="d3.legend.js"></script>
+    <script src="d3-tip.js"></script> -->
+    <!-- <script src="main.js"></script>
+    <script src="main2.js"></script> -->
+    <script src="index.js"></script>
+</body>
+</html>

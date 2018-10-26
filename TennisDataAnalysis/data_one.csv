@@ -1,0 +1,205 @@
+country,GDP_percapita,population_growth%,GDP_growth%,standard_deviation,current_state,prediction_rate,prediction_status
+Ireland,60513.6,0.3,26.3,2.842163827,developed,87.66666667,gradually developing
+Nauru,18469.2,2.3,18.7,0.172656926,developed,8.130434783,gradually developing
+Ethiopia,602.8,2.6,9.6,-0.96172668,under_developed,3.692307692,gradually developing
+India,1614.2,1.2,7.6,-0.897510298,under_developed,6.333333333,gradually developing
+Lao People's Democratic Republic,1850.2,1.3,7.6,-0.882526052,under_developed,5.846153846,gradually developing
+Mali,744.3,2.9,7.6,-0.952742482,under_developed,2.620689655,gradually developing
+Myanmar,1161.5,0.9,7.3,-0.926253383,under_developed,8.111111111,gradually developing
+Cambodia,1158.7,1.6,7,-0.926431162,under_developed,4.375,gradually developing
+Democratic Republic of the Congo,486.2,3.3,7,-0.969129914,under_developed,2.121212121,gradually developing
+Dominican Republic,6373.6,1.2,7,-0.595323772,under_developed,5.833333333,gradually developing
+United Republic of Tanzania,877.3,3.1,7,-0.944297971,under_developed,2.258064516,gradually developing
+China,8109.1,0.5,6.9,-0.485132422,under_developed,13.8,gradually developing
+Rwanda,697.3,2.5,6.9,-0.955726633,under_developed,2.76,gradually developing
+Seychelles,14133.2,0.5,6.8,-0.102646846,under_developed,13.6,gradually developing
+Uzbekistan,2308.3,1.6,6.8,-0.853440107,under_developed,4.25,gradually developing
+Viet Nam,2067.9,1.1,6.7,-0.86870372,under_developed,6.090909091,gradually developing
+Bangladesh,1207.9,1.2,6.6,-0.923307328,under_developed,5.5,gradually developing
+Chad,713,3.3,6.6,-0.954729799,under_developed,2,gradually developing
+Mozambique,529.2,2.9,6.6,-0.966399733,under_developed,2.275862069,gradually developing
+Papua New Guinea,2797.6,2.2,6.6,-0.822373193,under_developed,3,gradually developing
+Djibouti,1956.3,1.7,6.5,-0.87578949,under_developed,3.823529412,gradually developing
+Senegal,901.1,3,6.5,-0.942786848,under_developed,2.166666667,gradually developing
+Turkmenistan,6996.7,1.8,6.5,-0.555761554,under_developed,3.611111111,gradually developing
+Grenada,8933.8,0.4,6.2,-0.432770101,under_developed,15.5,gradually developing
+Malta,23280.7,0.5,6.2,0.478151414,developed,12.4,gradually developing
+Philippines,2904.2,1.6,5.9,-0.815604886,under_developed,3.6875,gradually developing
+Cameroon,1217.3,2.7,5.8,-0.922710498,under_developed,2.148148148,gradually developing
+Panama,13268.1,1.7,5.8,-0.157574266,under_developed,3.411764706,gradually developing
+Oman,15550.8,6.5,5.7,-0.012639783,under_developed,0.876923077,gradually developing
+Palau,12122.5,0.8,5.7,-0.230311352,under_developed,7.125,gradually developing
+Kenya,1376.7,2.7,5.6,-0.912589782,under_developed,2.074074074,gradually developing
+Pakistan,1410.4,2.1,5.5,-0.910450083,under_developed,2.619047619,gradually developing
+Togo,559.4,2.6,5.5,-0.964482258,under_developed,2.115384615,gradually developing
+Monaco,165870.6,0.6,5.4,9.53155025,developed,9,gradually developing
+Uganda,647.7,3.4,5.4,-0.958875864,under_developed,1.588235294,gradually developing
+Namibia,4673.6,2.2,5.3,-0.703261137,under_developed,2.409090909,gradually developing
+Benin,779.1,2.8,5.2,-0.950532941,under_developed,1.857142857,gradually developing
+Bhutan,2677.1,1.6,5.2,-0.830024048,under_developed,3.25,gradually developing
+Malaysia,9768.4,1.8,5,-0.379779205,under_developed,2.777777778,gradually developing
+Nicaragua,2086.9,1.2,4.9,-0.867497361,under_developed,4.083333333,gradually developing
+Sudan,1977,2.3,4.9,-0.874475194,under_developed,2.130434783,gradually developing
+Bolivia (Plurinational State of),3076.8,1.6,4.8,-0.804646069,under_developed,3,gradually developing
+Central African Republic,333.2,0.4,4.8,-0.978844277,under_developed,12,gradually developing
+Comoros,1368.9,2.4,4.8,-0.913085024,under_developed,2,gradually developing
+Eritrea,914.9,2,4.8,-0.94191065,under_developed,2.4,gradually developing
+Guinea-Bissau,530,2.6,4.8,-0.966348939,under_developed,1.846153846,gradually developing
+Indonesia,3346.5,1.2,4.8,-0.787522123,under_developed,4,gradually developing
+Sri Lanka,3973.7,0.5,4.8,-0.747699585,under_developed,9.6,gradually developing
+Gambia,473.2,3.1,4.7,-0.969955317,under_developed,1.516129032,gradually developing
+Czechia,17561.7,0.1,4.5,0.115037421,developed,45,gradually developing
+Montenegro,6424.1,0.1,4.5,-0.592117398,under_developed,45,gradually developing
+Cuba,7656.6,0.2,4.4,-0.513862808,under_developed,22,gradually developing
+Morocco,2919.3,1.4,4.4,-0.814646148,under_developed,3.142857143,gradually developing
+Timor-Leste,2425.4,2.2,4.3,-0.846005127,under_developed,1.954545455,gradually developing
+Egypt,3452.3,2.2,4.2,-0.78080461,under_developed,1.909090909,gradually developing
+Iceland,50936,0.6,4.2,2.234057413,developed,7,gradually developing
+Tajikistan,925.9,2.2,4.2,-0.941212232,under_developed,1.909090909,gradually developing
+Antigua and Barbuda,14764.5,1.1,4.1,-0.062563989,under_developed,3.727272727,gradually developing
+Burkina Faso,611.1,3,4.1,-0.961199692,under_developed,1.366666667,gradually developing
+Guatemala,3903.5,2.1,4.1,-0.752156763,under_developed,1.952380952,gradually developing
+Sweden,50687.5,0.8,4.1,2.21827951,developed,5.125,gradually developing
+Turks and Caicos Islands,25121.8,2,4.1,0.59504758,developed,2.05,gradually developing
+Sao Tome and Principe,1752.8,2.2,4,-0.888710228,under_developed,1.818181818,gradually developing
+Turkey,9125.8,1.6,4,-0.420579528,under_developed,2.5,gradually developing
+Gabon,7960.7,3.3,3.9,-0.494554719,under_developed,1.181818182,gradually developing
+Ghana,1355.6,2.4,3.9,-0.913929476,under_developed,1.625,gradually developing
+Algeria,4154.1,2,3.8,-0.736245526,under_developed,1.9,gradually developing
+Saint Kitts and Nevis,15771.9,1.1,3.8,0.001398424,developed,3.454545455,gradually developing
+Slovakia,16082.5,0.1,3.8,0.021119215,developed,38,gradually developing
+The former Yugoslav Republic of Macedonia,4836.1,0.1,3.8,-0.692943595,under_developed,38,gradually developing
+Tonga,3784.5,0.4,3.8,-0.759712379,under_developed,9.5,gradually developing
+United Arab Emirates,40438.8,2,3.8,1.567563235,developed,1.9,gradually developing
+Costa Rica,11015,1.1,3.7,-0.30062937,under_developed,3.363636364,gradually developing
+Kiribati,1442.9,1.8,3.7,-0.908386574,under_developed,2.055555556,gradually developing
+Micronesia (Federated States of),3015.2,0.2,3.7,-0.808557211,under_developed,18.5,gradually developing
+Fiji,4921.9,0.7,3.6,-0.687495933,under_developed,5.142857143,gradually developing
+Honduras,2521.9,1.8,3.6,-0.839878094,under_developed,2,gradually developing
+Niger,359,3.8,3.6,-0.977206168,under_developed,0.947368421,gradually developing
+Qatar,73653.4,6.6,3.6,3.676443464,developed,0.545454545,gradually developing
+Kyrgyzstan,1106.4,1.6,3.5,-0.929751823,under_developed,2.1875,gradually developing
+Luxembourg,100160.8,2.2,3.5,5.359466345,developed,1.590909091,gradually developing
+Mauritius,9040.9,0.2,3.5,-0.425970047,under_developed,17.5,gradually developing
+State of Palestine,2715.5,2.7,3.5,-0.827585933,under_developed,1.296296296,gradually developing
+Tuvalu,3362.4,0.9,3.5,-0.786512591,under_developed,3.888888889,gradually developing
+Saudi Arabia,20710.6,2.8,3.4,0.314969166,developed,1.214285714,gradually developing
+Peru,6069.1,1.3,3.3,-0.614657259,under_developed,2.538461538,gradually developing
+New Caledonia,33965.7,1.4,3.2,1.156569497,developed,2.285714286,gradually developing
+Solomon Islands,1841.6,2.1,3.2,-0.883072088,under_developed,1.523809524,gradually developing
+Colombia,6056.1,1,3.1,-0.615482663,under_developed,3.1,gradually developing
+Guyana,4278.8,0.6,3.1,-0.728328003,under_developed,5.166666667,gradually developing
+Madagascar,401.8,2.7,3.1,-0.974488686,under_developed,1.148148148,gradually developing
+New Zealand,38294.3,1.1,3.1,1.431403424,developed,2.818181818,gradually developing
+Paraguay,4174.4,1.3,3.1,-0.734956627,under_developed,2.384615385,gradually developing
+Angola,4714.1,3.5,3,-0.700689688,under_developed,0.857142857,gradually developing
+Armenia,3489.1,0.3,3,-0.778468083,under_developed,10,gradually developing
+Malawi,372.9,2.9,3,-0.976323622,under_developed,1.034482759,gradually developing
+Anguilla,21879.6,1.2,2.9,0.389191978,developed,2.416666667,gradually developing
+Bahrain,22600.2,2,2.9,0.434944722,developed,1.45,gradually developing
+Zambia,1311.1,3,2.9,-0.916754895,under_developed,0.966666667,gradually developing
+Lesotho,940.6,1.3,2.8,-0.940278891,under_developed,2.153846154,gradually developing
+Maldives,9446.5,2.8,2.8,-0.400217462,under_developed,1,gradually developing
+Samoa,4006,0.8,2.8,-0.745648775,under_developed,3.5,gradually developing
+Thailand,5814.8,0.4,2.8,-0.630803419,under_developed,7,gradually developing
+Nepal,724.5,1.2,2.7,-0.953999635,under_developed,2.25,gradually developing
+Nigeria,2714.5,2.7,2.7,-0.827649426,under_developed,1,gradually developing
+Somalia,144.5,2.9,2.7,-0.990825324,under_developed,0.931034483,gradually developing
+Republic of Korea,27396.7,0.4,2.6,0.739486821,developed,6.5,gradually developing
+United States of America,56053.8,0.7,2.6,2.558999675,developed,3.714285714,gradually developing
+El Salvador,4219.4,0.5,2.5,-0.732099461,under_developed,5,gradually developing
+Israel,37129.4,1.6,2.5,1.357440932,developed,1.5625,gradually developing
+Mexico,8980.9,1.4,2.5,-0.429779601,under_developed,1.785714286,gradually developing
+Argentina,14564.5,1,2.4,-0.075262502,under_developed,2.4,gradually developing
+Australia,51352.2,1.5,2.4,2.26048302,developed,1.6,gradually developing
+"China, Hong Kong SAR",42431,0.6,2.4,1.694053127,developed,4,gradually developing
+Jordan,4940.1,4.9,2.4,-0.686340368,under_developed,0.489795918,gradually developing
+Chile,13416.2,0.9,2.3,-0.148171017,under_developed,2.555555556,gradually developing
+Mongolia,3973.4,1.9,2.3,-0.747718633,under_developed,1.210526316,gradually developing
+Slovenia,20689.8,0.3,2.3,0.313648521,developed,7.666666667,gradually developing
+United Kingdom,44162.4,0.6,2.2,1.803984159,developed,3.666666667,gradually developing
+Netherlands,44332.1,0.3,2,1.814758847,developed,6.666666667,gradually developing
+Singapore,52239,1.7,2,2.316788228,developed,1.176470588,gradually developing
+South Sudan,1067,3.3,2,-0.932253431,under_developed,0.606060606,gradually developing
+Saint Lucia,7839.4,0.5,1.9,-0.502256367,under_developed,3.8,gradually developing
+Kuwait,29303.9,5.4,1.8,0.860579846,developed,0.333333333,gradually developing
+Cyprus,21941.9,0.9,1.7,0.393147565,developed,1.888888889,gradually developing
+Germany,41686.2,0.2,1.7,1.646763863,developed,8.5,gradually developing
+Haiti,793.7,1.4,1.7,-0.949605949,under_developed,1.214285714,gradually developing
+Swaziland,3211.7,1.8,1.7,-0.796080921,under_developed,0.944444444,gradually developing
+Denmark,53149.3,0.5,1.6,2.374585513,developed,3.2,gradually developing
+French Polynesia,18161,0.7,1.6,0.153088517,developed,2.285714286,gradually developing
+Norway,74185.5,1.2,1.6,3.710227859,developed,1.333333333,gradually developing
+Belgium,40277.8,0.6,1.5,1.557340931,developed,2.5,gradually developing
+Cabo Verde,3080.2,1.2,1.5,-0.804430194,under_developed,1.25,gradually developing
+Lebanon,8571.4,6,1.5,-0.455779808,under_developed,0.25,gradually developing
+Liechtenstein,169491.8,0.8,1.4,9.761469535,developed,1.75,gradually developing
+France,36304.2,0.4,1.3,1.305046865,developed,3.25,gradually developing
+South Africa,5773,1.4,1.3,-0.633457408,under_developed,0.928571429,gradually developing
+Belize,4789.4,2.2,1.2,-0.695908698,under_developed,0.545454545,gradually developing
+Congo,1838.1,2.6,1.2,-0.883294312,under_developed,0.461538462,gradually developing
+Kazakhstan,10312.1,1.6,1.2,-0.345258296,under_developed,0.75,gradually developing
+Mauritania,1235,2.9,1.2,-0.921586679,under_developed,0.413793103,gradually developing
+Zimbabwe,890.4,2.3,1.1,-0.943466218,under_developed,0.47826087,gradually developing
+Austria,44117.7,0.6,1,1.801146041,developed,1.666666667,gradually developing
+Jamaica,5105.8,0.4,1,-0.675819649,under_developed,2.5,gradually developing
+San Marino,49240.2,1.2,1,2.126386717,developed,0.833333333,gradually developing
+Uruguay,15573.8,0.3,1,-0.011179454,under_developed,3.333333333,gradually developing
+Barbados,15429.4,0.3,0.9,-0.020347781,under_developed,3,gradually developing
+Canada,43205.6,1,0.9,1.74323447,developed,0.9,gradually developing
+Switzerland,80831.1,1.2,0.8,4.132174065,developed,0.666666667,gradually developing
+Tunisia,3660.9,1.2,0.8,-0.76756006,under_developed,0.666666667,gradually developing
+Azerbaijan,5438.7,1.3,0.7,-0.654682974,under_developed,0.538461538,gradually developing
+Cayman Islands,62132,1.5,0.7,2.944920198,developed,0.466666667,gradually developing
+Marshall Islands,3452.6,0.2,0.6,-0.780785562,under_developed,3,gradually developing
+Sint Maarten (Dutch part),28241.7,3.1,0.5,0.793138041,developed,0.161290323,gradually developing
+Iran (Islamic Republic of),5038.1,1.2,0.4,-0.680118096,under_developed,0.333333333,gradually developing
+Montserrat,11553.4,0.7,0.4,-0.266444972,under_developed,0.571428571,gradually developing
+Liberia,455.9,2.6,0.3,-0.971053739,under_developed,0.115384615,gradually developing
+Ecuador,6205.1,1.6,0.2,-0.60602227,under_developed,0.125,gradually developing
+Finland,42148.1,0.4,0.2,1.67609108,developed,0.5,gradually developing
+Trinidad and Tobago,19062.9,0.5,0.2,0.210352463,developed,0.4,gradually developing
+Aruba,26005.4,0.5,0.1,0.651149612,developed,0.2,gradually developing
+Guinea,703.9,2.3,0.1,-0.955307582,under_developed,0.043478261,gradually developing
+Greece,17788,-0.4,-0.2,0.129405789,developed,0.5,gradually developing
+Republic of Moldova,1591.4,-0.1,-0.7,-0.898957928,under_developed,7,gradually developing
+Syrian Arab Republic,1534.5,-2.3,-5.3,-0.902570655,under_developed,2.304347826,gradually developing
+Ukraine,2021.6,-0.5,-9.9,-0.871643426,under_developed,19.8,gradually developing
+Botswana,6360.6,1.8,-0.3,-0.596149176,under_developed,0.166666667,Highly declining
+Brunei Darussalam,30552.7,1.4,-0.6,0.939869364,developed,0.428571429,Highly declining
+Vanuatu,2783,2.3,-1,-0.823300185,under_developed,0.434782609,Highly declining
+British Virgin Islands,30144.5,2,-1.1,0.913951698,developed,0.55,Highly declining
+Democratic People's Republic of Korea,648,0.5,-1.1,-0.958856816,under_developed,2.2,Highly declining
+Bahamas,22817.2,1.4,-1.7,0.448722609,developed,1.214285714,Highly declining
+Dominica,7051.1,0.5,-1.8,-0.552307558,under_developed,3.6,Highly declining
+Afghanistan,623.2,3.2,-2.4,-0.960431432,under_developed,0.75,Highly declining
+Iraq,4509,3.2,-2.4,-0.713712014,under_developed,0.75,Highly declining
+Suriname,8985.3,1,-2.7,-0.429500234,under_developed,2.7,Highly declining
+Russian Federation,9243.3,0.1,-3.7,-0.413119152,under_developed,37,Highly declining
+Brazil,8528.3,0.9,-3.8,-0.458516337,under_developed,4.222222222,Highly declining
+Burundi,244.6,3,-4.1,-0.984469718,under_developed,1.366666667,Highly declining
+Venezuela (Bolivarian Republic of),11068.9,1.4,-6.2,-0.297207121,under_developed,4.428571429,Highly declining
+Equatorial Guinea,16344.1,4.2,-7.4,0.037728871,developed,1.761904762,Highly declining
+Libya,5488.2,0.2,-10.2,-0.651540092,under_developed,51,Highly declining
+"China, Macao SAR",78586.4,2.3,-20.3,3.989652299,developed,8.826086957,Highly declining
+Sierra Leone,694.8,2.3,-20.3,-0.955885364,under_developed,8.826086957,Highly declining
+Yemen,1106.4,2.6,-28.1,-0.929751823,under_developed,10.80769231,Highly declining
+Cook Islands,14118.7,-1.2,5.5,-0.103567489,under_developed,4.583333333,Highly developing
+Romania,9120.7,-0.6,3.7,-0.420903341,under_developed,6.166666667,Highly developing
+Spain,25865.4,-0.2,3.2,0.642260653,developed,16,Highly developing
+Bosnia and Herzegovina,4265,-1,3.1,-0.7292042,under_developed,3.1,Highly developing
+Hungary,12350.6,-0.3,3.1,-0.215828697,under_developed,10.33333333,Highly developing
+Bulgaria,6846.8,-0.6,3,-0.56527909,under_developed,5,Highly developing
+Georgia,3491.4,-1.4,2.8,-0.77832205,under_developed,2,Highly developing
+Latvia,13704.1,-1.2,2.7,-0.129891507,under_developed,2.25,Highly developing
+Albania,3984.2,-0.1,2.6,-0.747032913,under_developed,26,Highly developing
+Lithuania,14383.7,-1.3,1.8,-0.086741958,under_developed,1.384615385,Highly developing
+Croatia,11479.4,-0.4,1.6,-0.271143422,under_developed,4,Highly developing
+Portugal,19239.2,-0.4,1.6,0.221546203,developed,4,Highly developing
+Estonia,17112,-0.3,1.4,0.086484813,developed,4.666666667,Highly developing
+Japan,34628.7,-0.1,1.2,1.198665069,developed,12,Highly developing
+Andorra,39896.4,-1.6,0.8,1.533124866,developed,0.5,Highly developing
+Serbia,5238.6,-0.4,0.8,-0.667387836,under_developed,2,Highly developing
+Italy,30462.4,-0.1,0.7,0.934135985,developed,7,Highly developing
+Bermuda,94399.9,-0.6,0.4,4.993692013,developed,0.666666667,Highly developing
+Greenland,36976.7,-0.1,0.3,1.347745617,developed,3,Highly developing
